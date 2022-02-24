@@ -30,11 +30,9 @@ document.getElementById('total-calc').addEventListener('click',function(){
 document.getElementById('save-button').addEventListener('click',function(){
     const saveAmmount = getInputValue('save-input');
     console.log(saveAmmount)
+    const incomeAmmount = getInputValue('income-input');
      const savingsTotal = document.getElementById('saving-ammount');
-    //  getInputValue('saving-ammount');
-     console.log(savingsTotal)
-    
-           savingsTotalTk= balanceTotalTk/saveAmmount;
+           savingsTotalTk= (incomeAmmount * saveAmmount)/100;
            savingsTotal.innerText= 'Savings: '+ savingsTotalTk;
            
         const remainingBalanceTotalTk =document.getElementById('remaining-balance');
